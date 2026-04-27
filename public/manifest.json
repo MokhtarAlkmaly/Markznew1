@@ -1,21 +1,21 @@
 {
-  "name": "نظام المسابقة الرمضانية",
-  "short_name": "المسابقة الرمضانية",
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#047857",
-  "theme_color": "#047857",
-  "lang": "ar",
+  "short_name": "مركز إنماء",
+  "name": "نظام المسابقة الرمضانية - مركز إنماء",
   "icons": [
     {
-      "src": "/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
     },
     {
-      "src": "/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
-  ]
+  ],
+  "start_url": "/Markznew1/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/Markznew1/",
+  "theme_color": "#047857"
 }
