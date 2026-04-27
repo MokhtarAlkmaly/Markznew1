@@ -8,37 +8,46 @@
     <meta name="author" content="مختار الكمالي" />
     <meta name="keywords" content="مسابقة رمضانية, حفظ القرآن, مركز إنماء, تحفيظ القرآن" />
 
-    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="/Markznew1/manifest.json">
+
     <meta name="theme-color" content="#047857" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="المسابقة الرمضانية" />
-    <link rel="apple-touch-icon" href="/icon-192.png" />
-    <link rel="icon" type="image/png" href="/icon-192.png" />
     
-    <!-- Open Graph -->
+    <link rel="apple-touch-icon" href="/Markznew1/icon-192.png" />
+    <link rel="icon" type="image/png" href="/Markznew1/icon-192.png" />
+    
     <meta property="og:title" content="نظام المسابقة الرمضانية - مركز إنماء" />
     <meta property="og:description" content="نظام إدارة المسابقة الرمضانية لحفظ القرآن الكريم" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/icon-512.png" />
+    <meta property="og:image" content="/Markznew1/icon-512.png" />
     
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="نظام المسابقة الرمضانية" />
     <meta name="twitter:description" content="نظام إدارة المسابقة الرمضانية لحفظ القرآن الكريم" />
-    <meta name="twitter:image" content="/icon-512.png" />
+    <meta name="twitter:image" content="/Markznew1/icon-512.png" />
   </head>
 
   <body>
     <div id="root"></div>
-<script>
-  type="module" src="/src/main.tsx">
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js');
-    });
-  }
-  
-</script>
+
+    <script type="module" src="/src/main.tsx"></script>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          // تأكد أن اسم الملف هو service-worker.js وموجود في المجلد العام (public)
+          navigator.serviceWorker.register('/Markznew1/service-worker.js')
+            .then(registration => {
+              console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch(error => {
+              console.error('Service Worker registration failed:', error);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
+
